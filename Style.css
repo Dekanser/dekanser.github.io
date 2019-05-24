@@ -1,0 +1,129 @@
+.osnova {
+	max-width: 960px;
+	margin: auto;
+}
+
+.content {
+	width: 60%;
+}
+
+.menu, .sidebar {
+	width: 20%;
+}
+
+.menu, .content, .sidebar {
+	float: left;
+}
+
+
+body {
+	background-color: red;
+	color: white;
+	cursor: url(pointer.cur), auto;
+}
+
+p::selection, img::selection, textarea::selection, input::selection, h1::selection,a::selection, label::selection, div::selection {
+	background: black;
+	color: white;
+	opacity: 0.2;
+	text-shadow: 2px 1.2px 1px red;
+}
+
+
+
+.menu .site-nav {
+	list-style-type: none;
+	padding: 10px;
+	width: 150px;
+	text-align: center;
+	margin: auto;
+}
+
+.menu .site-nav li a {
+	text-decoration: none;
+	color: White;
+}
+
+.menu .site-nav li {
+	border: 2px solid black;
+	border-bottom: none;
+	padding: 5px;
+}
+
+.menu .site-nav li:last-child {
+	border-bottom: 2px solid black;
+}
+
+.menu .site-nav li:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.menu .site-nav li a:hover {
+	text-decoration: underline;
+}
+.content h1 {
+	font-family: impact;
+	color: black;
+	cursor: url(pointer.cur), auto; 
+}
+
+.content h1, .content p, form, .sidebar div{
+	margin: 5px;
+	padding: 5px;
+}
+.kartinka {
+	margin: 10px;
+	padding: 0px;
+	font-size: 0;
+	border: 2px solid black;
+}
+
+.kartinka img {
+	width: 100%;
+}
+
+form input {
+	margin-bottom: 20px;
+	padding: 5px;
+	border: 2px solid black;
+	background-color: rgba(0, 0, 255, 0.1);
+	color: white;
+	outline: 0px solid black;
+}
+.knopka {
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+}
+.knopka input:hover {
+	text-decoration: underline;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+#ramka textarea {
+	max-height: 700px;
+	min-height: 150px;
+	max-width: 100%;
+	min-width: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: rgba(0, 0, 255, 0.0);
+	outline: 0px solid black;
+	border: 0px solid black;
+	color: white;
+}
+#ramka {
+	outline: 2px solid black;
+	padding: 5px;
+	margin: 2px;
+	padding-bottom: 0px;
+	background-color: rgba(0, 0, 255, 0.1);
+}
+
+#ramka:target {
+	background-color: rgba(255,255,255,0.3);
+}
+.content p::first-letter {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 2em;
+	color: black;
+}
