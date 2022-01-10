@@ -12,5 +12,36 @@
 	<script type="text/javascript" src="js/snow.js"></script>
 	<script src="libs/jquery/jquery-3.4.1.js"></script>
 	<script src="js/main.js"></script>
+	
+	
+<div>Определение по Яндексу</div>
+				<div id="ya_whoami"></div>
+				<div id="info_map_ip" style="width:1px; height:1px;display:none;opacity:0;"></div>
+				<script src="http://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+				<script>
+					ymaps.ready(init);
+
+					function init() {
+						// Данные о местоположении, определённом по IP
+						var geolocation = ymaps.geolocation,
+						// координаты
+							coords = [geolocation.latitude, geolocation.longitude],
+							myMap = new ymaps.Map('info_map_ip', {
+								center: coords,
+								zoom: 10
+							});
+							/*
+							alert(geolocation.country);
+							alert(geolocation.city);
+							alert(geolocation.region);
+							*/
+							//if(geolocation.country.indexOf('Россия') >= 0) {
+							//if(geolocation.region.indexOf('Москва') < 0) {
+							document.getElementById("ya_whoami").innerHTML = "<div><b>Страна</b> "+geolocation.country+"</div>"+"\r\n"+
+																			 "<div><b>Город</b> "+geolocation.city+"</div>"+"\r\n"+
+																			 "<div><b>Регион</b> "+geolocation.region+"</div>"+"\r\n";
+					}
+				</script>
+	
 </body>
 </html>
